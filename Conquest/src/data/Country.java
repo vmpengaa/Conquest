@@ -1,5 +1,9 @@
 package data;
 
+/**
+ * @author Vmpengaa
+ *
+ */
 public class Country {
 	private String name;
 	private String color;

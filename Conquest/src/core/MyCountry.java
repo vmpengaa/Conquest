@@ -3,10 +3,13 @@ package core;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
 import data.Country;
 import exception.CountryAlreadyExistsException;
 
+/**
+ * @author Vmpengaa
+ *
+ */
 public class MyCountry {
 	private ArrayList<Country> myCountry = new ArrayList<Country>();
 

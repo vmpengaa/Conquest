@@ -5,24 +5,20 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 import data.Material;
 
-/**
- * @author Vmpengaa
- *
- */
-public class MyMaterial {
-	private ArrayList<Material> myMaterial = new ArrayList<Material>();
+public class GenerableMaterial {
+	private ArrayList<Material> generableMaterial = new ArrayList<Material>();
 
 	public void add(Material material) {
-		if (myMaterial.contains(material)) {
+		if (generableMaterial.contains(material)) {
 			material.setAmount(material.getAmount() + 1);
 		} else {
-			myMaterial.add(material);
+			generableMaterial.add(material);
 		}
 	}
 	
 	public Material searchByName(String name) throws NoSuchElementException {
 		Material result = null;
-		Iterator<Material> iterator = myMaterial.iterator();
+		Iterator<Material> iterator = generableMaterial.iterator();
 		
 		while (iterator.hasNext()) {
 			Material material = iterator.next();
@@ -39,17 +35,17 @@ public class MyMaterial {
 	}
 
 	public void remove(Material material) {
-		myMaterial.remove(material);
+		generableMaterial.remove(material);
 	}
 
 	public void removeAll() {
-		myMaterial.clear();
+		generableMaterial.clear();
 	}
 
-	public int getCurrentMaterialCount() {
+	public int getCurrentGenerableMaterialCount() {
 		int size = 0; 
 		
-		for (Material material : myMaterial) {
+		for (Material material : generableMaterial) {
 			size = size + (1 * material.getAmount());
 		}
 		return size;
@@ -57,7 +53,7 @@ public class MyMaterial {
 	
 	public String toString() {
 		String result = "";
-		for (Material material : myMaterial) {
+		for (Material material : generableMaterial) {
 			result += material.toString() + "\n";
 		}
 		return result;

@@ -1,10 +1,14 @@
 package data;
 
+/**
+ * @author Vmpengaa
+ *
+ */
 public class Resource extends Material {
 	private String particularity;
 
 	public Resource(String type, String name, int amount, String particularity) {
-		super(type, name, amount);
+		super(type, name, particularity, particularity, amount, amount, amount);
 		this.particularity = particularity;
 	}
 

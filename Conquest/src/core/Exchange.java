@@ -2,6 +2,10 @@ package core;
 
 import data.Material;
 
+/**
+ * @author Vmpengaa
+ *
+ */
 public class Exchange {
 	public static void exchange(Material saleProduct, Material myProduct, MyMaterial myMaterial) {
 

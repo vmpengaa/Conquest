@@ -2,6 +2,10 @@ package exception;
 
 import data.Country;
 
+/**
+ * @author Vmpengaa
+ *
+ */
 @SuppressWarnings("serial")
 
 public class CountryAlreadyExistsException extends Exception {

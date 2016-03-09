@@ -1,11 +1,15 @@
 package data;
 
+/**
+ * @author Vmpengaa
+ *
+ */
 public class HardwarePlayer extends Material {
 	private int value; // for creation && sale
 	private String NameResourceExchange; // for creation && sale
 	
 	public HardwarePlayer(String type, String name, int amount, int value, String nameResourceExchange) {
-		super(type, name, amount);
+		super(type, name, nameResourceExchange, nameResourceExchange, amount, value, value);
 		this.value = value;
 		NameResourceExchange = nameResourceExchange;
 	}

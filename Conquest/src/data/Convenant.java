@@ -1,5 +1,9 @@
 package data;
 
+/**
+ * @author Vmpengaa
+ *
+ */
 public class Convenant {
 	private String name;
 	private String nameCreator;

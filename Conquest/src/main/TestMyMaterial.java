@@ -1,10 +1,13 @@
 package main;
 
 import java.util.NoSuchElementException;
-
 import core.MyMaterial;
 import data.Material;
 
+/**
+ * @author Vmpengaa
+ *
+ */
 public class TestMyMaterial {
 	
 	public static void main(String[] args) {
@@ -15,8 +18,8 @@ public class TestMyMaterial {
 	
 	private static void testOperations(MyMaterial myMaterial) {
 		try {
-			Material material1 = new Material("BattleEquipment","tank",1);
-			Material material2 = new Material("FightingEquipment","attackEquipment",1);
+			Material material1 = new Material("BattleEquipment","tank",null,null,1,0,0);
+			Material material2 = new Material("FightingEquipment","attackEquipment",null,null,1,0,0);
 			
 			// ajout de materiel dans mon arsenal
 			myMaterial.add(material1);

@@ -1,5 +1,9 @@
 package data;
 
+/**
+ * @author Vmpengaa
+ *
+ */
 public class Player {
 	private String pseudo;
 	private String color;

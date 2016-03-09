@@ -2,6 +2,7 @@ package core;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 import data.Material;
 
@@ -9,10 +10,14 @@ public class MyMaterial {
 	private ArrayList<Material> myMaterial = new ArrayList<Material>();
 
 	public void add(Material material) {
+		if (myMaterial.contains(material)) {
+			material.setAmount(material.getAmount() + 1);
+		} else {
 			myMaterial.add(material);
+		}
 	}
 	
-	public Material searchByName(String name) {
+	public Material searchByName(String name) throws NoSuchElementException {
 		Material result = null;
 		Iterator<Material> iterator = myMaterial.iterator();
 		
@@ -23,11 +28,11 @@ public class MyMaterial {
 			}
 		}
 		if (result == null) {
-			System.out.println("mess d'erreur1." + result);
-		} else {
+			throw new NoSuchElementException("L'objet " + name + " n'existe pas.");
+		}
+		else {
 			return result;
 		}
-		return result;
 	}
 
 	public void remove(Material material) {
@@ -39,7 +44,12 @@ public class MyMaterial {
 	}
 
 	public int getCurrentMaterialCount() {
-		return myMaterial.size();
+		int size = 0; 
+		
+		for (Material material : myMaterial) {
+			size = size + (1 * material.getAmount());
+		}
+		return size;
 	}
 	
 	public String toString() {

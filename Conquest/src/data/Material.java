@@ -3,7 +3,10 @@ package data;
 public class Material {
 	private String type;
 	private String name;
+	private String nameResourceExchange;
 	private int amount;
+	private  int value;
+	private int price;
 	
 	public Material(String type, String name, int amount) {
 		super();
@@ -36,23 +39,33 @@ public class Material {
 		this.amount = amount;
 	}
 
-	public Object getNameResourceExchange() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getNameResourceExchange() {
+		return nameResourceExchange;
+	}
+
+	public void setNameResourceExchange(String nameResourceExchange) {
+		this.nameResourceExchange = nameResourceExchange;
 	}
 
 	public int getValue() {
-		// TODO Auto-generated method stub
-		return 0;
+		return value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
 	}
 
 	public int getPrice() {
-		// TODO Auto-generated method stub
-		return 0;
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
 	}
 
 	@Override
 	public String toString() {
-		return "Material [type=" + type + ", name=" + name + ", amount=" + amount + "]";
+		return "Material [type=" + type + ", name=" + name + ", nameResourceExchange=" + nameResourceExchange
+				+ ", amount=" + amount + ", value=" + value + ", price=" + price + "]";
 	}
 }

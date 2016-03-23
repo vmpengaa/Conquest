@@ -9,6 +9,12 @@ public class Player {
 	private String color;
 	private int point;
 	private Convenant myConvenant;
+	
+	public Player(String pseudo, String color) {
+		super();
+		this.pseudo = pseudo;
+		this.color = color;
+	}
 
 	public Player(String pseudo, String color, int point) {
 		super();

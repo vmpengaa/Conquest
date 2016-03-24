@@ -1,8 +1,5 @@
 package data;
 
-
-
-
 import org.lwjgl.opengl.Display;
 
 import static helpers.Artist.*;

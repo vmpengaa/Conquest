@@ -18,10 +18,7 @@ public class Boot {
 		while(!Display.isCloseRequested()){
 			Display.update();
 			Display.sync(60);
-	
 			DrawHexagone(18,00,20,36);
-
-
 		}
 		
 	Display.destroy();
@@ -31,5 +28,4 @@ public class Boot {
 	public static void main(String[] args){
 		new Boot();
 	}
-
 }

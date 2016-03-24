@@ -1,7 +1,4 @@
-package data;
-
-
-
+package gui;
 
 import org.lwjgl.opengl.Display;
 
